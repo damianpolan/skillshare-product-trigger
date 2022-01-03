@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_03_145441) do
+ActiveRecord::Schema.define(version: 2022_01_03_175605) do
 
   create_table "shops", force: :cascade do |t|
     t.string "shopify_domain", null: false
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2022_01_03_145441) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "access_scopes"
+    t.decimal "minimum_premium_price", default: "50.0"
     t.index ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true
   end
 
