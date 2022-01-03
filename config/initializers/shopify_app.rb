@@ -19,6 +19,10 @@ ShopifyApp.configure do |config|
     raise('Missing SHOPIFY_API_KEY. See https://github.com/Shopify/shopify_app#requirements') unless config.api_key
     raise('Missing SHOPIFY_API_SECRET. See https://github.com/Shopify/shopify_app#requirements') unless config.secret
   end
+
+  config.webhooks = [
+    {topic: 'products/create', address: "https://#{Rails.application.config.host}/webhooks/products_create"}
+  ]
 end
 
 # ShopifyApp::Utils.fetch_known_api_versions                        # Uncomment to fetch known api versions from shopify servers on boot
