@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.host = "f914-2607-fea8-c29f-3a00-394d-bc4f-2131-f246.ngrok.io"
+  config.host = "dee9-2607-fea8-c29f-3a00-e943-d67d-184a-fe4f.ngrok.io"
 
   config.hosts = (config.hosts rescue []) << /\w+\.ngrok\.io/
   config.hosts << config.host
